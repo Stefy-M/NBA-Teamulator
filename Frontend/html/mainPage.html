@@ -16,12 +16,16 @@
 <body>
 
     <div class="wrapper">
-        <div class="header" id="header">
 
+        <!--Header-->
+        <div class="header">
+            <h1 id="welcomeHeader"></h1>
         </div>
 
+        <!--First Column -->
         <div class="gameSection row">
             <div class="playerForm col">
+                <h2> Team 1</h2>
                 <form action="" id="player1Form">
                     <div class="option">
                         <label for="player1">Player #1</label>
@@ -62,12 +66,59 @@
                 </form>
 
             </div>
+
+            <!-- Middle Column-->
             <div class="middle col">
-
+                <h1 class ="text-center">VS</h1>
             </div>
+
+            <!-- Third column-->
             <div class="playerForm col">
+                    <h2> Team 2</h2>
+                <form action="" id="player2Form">
+                    <div class="option">
+                        <label for="player1">Player #1</label>
+                        <input list="players">
+                        <datalist id="players">
+                            <!--Use the backend server to show players list-->
+                            <option value="Kobe Bryant">
+                            <option value="Michael Jordan">
+                        </datalist>
+                    </div>
+                    <div class="option">
+                        <label for="player2">Player #2</label>
+                        <input list="players2">
+                        <datalist id="players2">
+                            <!--Use the backend server to show players list-->
+                            <option value="Kobe Bryant">
+                            <option value="Michael Jordan">
+                        </datalist>
+                    </div>
+                    <div class="option">
+                        <label for="player3">Player #3</label>
+                        <input list="players3">
+                        <datalist id="players3">
+                            <!--Use the backend server to show players list-->
+                            <option value="Kobe Bryant">
+                            <option value="Michael Jordan">
+                        </datalist>
+                    </div>
+                    <div class="option">
+                        <label for="player4">Player #4</label>
+                        <input list="players4">
+                        <datalist id="players4">
+                            <!--Use the backend server to show players list-->
+                            <option value="Kobe Bryant">
+                            <option value="Michael Jordan">
+                        </datalist>
+                    </div>
+                </form>
 
             </div>
+        </div>
+
+        <div class="buttonSection">
+            <button>Simulate</button>
         </div>
 
 

@@ -1,6 +1,40 @@
 
-.playerForm, .middle, .header{
-    border: 1px solid rgb(209, 15, 15);
+.playerForm, .middle, .header, .buttonSection{
+    /*border: 1px solid red;*/
     padding: 20px;
     margin: 10px;
 }
+
+.playerForm div{
+    margin: 15px;
+}
+
+.buttonSection {
+    
+   text-align: center;
+}
+
+.middle h1{
+    color: black;
+    font-size: 200px;
+    
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.buttonSection button{
+    padding:20px;
+}
+
+.wrapper{
+    margin: 15px ;
+    text-align: center;
+    height: 100%;
+    background-color: #ADEBE6;
+    border: 6px solid black;
+    border-radius: 10px;
+    font-family: 'Concert One', cursive;
+   
+}
+
