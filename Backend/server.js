@@ -17,10 +17,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors())
+app.use(express.static(__dirname + "/../Frontend/"));
 
-var password = '' //Enter password here
+const password = 'sep51995...' //Enter password here
 const uri = 'mongodb+srv://stefy:'+password+'@cluster0-xhrbw.mongodb.net/test?retryWrites=true'; //This the uri to the remote MongoDb Cluster
+const routes = require('./routes/apiRoutes')
 
+routes(app)
 
 MongoClient.connect(uri,{useNewUrlParser:true})
 .then(client => {
