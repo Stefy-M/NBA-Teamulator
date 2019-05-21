@@ -33,8 +33,7 @@ var Player = function(player){
   valid and does not already exist in the database. If so, add player to 
   database and return object with success = true. If not, 
   do not add player to database and return object with success = false.
-  See assignment prompt for further details on required content of 
-  return object.
+ 
 */
 Player.addPlayer = function(playerDb, newPlayer,result){
 
@@ -45,8 +44,7 @@ Player.addPlayer = function(playerDb, newPlayer,result){
   If player could be found, return object with success = true and 
   all data associated with player. If player could not be found,
   return object with success = false. 
-  See assignment prompt for further details on required content of 
-  return object.  
+  
 */
 Player.getPlayer = function (playerId, players, result) {
 
@@ -56,9 +54,7 @@ Player.getPlayer = function (playerId, players, result) {
   using orderBy to sort appropriately. 
   If data could be retrieved, return object with success = true. 
   Otherwise, return object wtih success = false.
-  See assignment prompt for further details on  what player data to
-  include, how to sort player data, and warequired content of 
-  return object.  
+  
 */
 Player.getAllPlayers = function (orderBy,players, result) {
 
