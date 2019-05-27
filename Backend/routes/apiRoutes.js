@@ -13,6 +13,9 @@ module.exports = function(app){
         res.sendFile(path.resolve(__dirname+'/../../index.html'))
     })
 
+    app.route('/api/login')
+    .post(bPlayer.loginPlayer)
+
     
 
 }

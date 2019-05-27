@@ -25,7 +25,7 @@ var Player = function(player){
     this.PointsPerGame = player.ppg;
     this.StealsPerGame = player.spg;
     this.AssistPerGame = player.apg;
-    this.ReboundsPerGame= playerrpg;
+    this.ReboundsPerGame= player.rpg;
 
 }
 
@@ -50,6 +50,34 @@ Player.getPlayer = function (playerId, players, result) {
 
 }
 
+Player.loginPlayer = function (player, userCollection, result){
+  resultObj = {success: false}
+
+  var query = {email: player.username, password: player.password}
+  console.log(query)
+ // console.log(userCollection)
+
+  userCollection.find(query).toArray(function(err,res){
+    //console.log(res,res.length)
+    if(err){throw err;}
+
+    else if(res.length == 1){
+      resultObj.success = true;
+      resultObj.statusMsg = "Player Found";
+      resultObj.data = res[0];
+      result(resultObj,null)
+    }
+    else{
+      resultObj.statusMsg = "Player does not exist";
+      result(resultObj,null)
+
+    }
+
+    
+
+  })
+}
+
 /*getAllPlayers -- Retrieve data on all players in tournament,
   using orderBy to sort appropriately. 
   If data could be retrieved, return object with success = true. 
@@ -61,4 +89,4 @@ Player.getAllPlayers = function (orderBy,players, result) {
 }
 
 
-module.exports = {Players};
+module.exports = {Player};
