@@ -42,6 +42,8 @@ exports.loginPlayer = function (req,res){
             
             if(result.success == true){
 
+                console.log("Successfully Logged In")
+
                 res.sendFile(path.resolve(__dirname+'/../../Frontend/html/mainPage.html'))
             }
 
